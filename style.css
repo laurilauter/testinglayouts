@@ -135,7 +135,7 @@ ul {
     padding: 20px;
     font-size: 30px;
     text-align: center;
-    background-image: url("./coding2.webp"); /* The image used */
+    /* background-image: url("./coding2.webp"); */ /* The image used */
     background-color: #919191; /* Used if the image is unavailable */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
