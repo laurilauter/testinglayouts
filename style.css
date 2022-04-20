@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+button {
+  background-color: aquamarine;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  height: 30px;
+}
+
+ul {
+  list-style: none;
+}
+
+.parent {
+  height: 100px;
+  width: 100px;
+  background-color: #919191;
+}
+
+.child {
+  height: 50%;
+  width: 50%;
+  background-color: aqua;
+  text-decoration: underline 3px green;
+  transition: transform 1s;
+}
+
+.parent :hover {
+  transform: translateX(100%);
+  transform: rotate(90);
+}
+
+/* END General */
+
+.grid-container {
+  min-height: 97vh;
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: repeat(4 1fr);
+  padding: 10px;
+  grid-template-rows: repeat(8 1fr);
+}
+
+.grid-hero {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: rgba(247, 237, 212, 0.8);
+  border-radius: 0.5em;
+  padding: 20px;
+  font-size: 3em;
+  color: antiquewhite;
+
+  /* background-image: url("./coding2.webp"); */ /* The image used */
+  background-color: #919191; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.grid-side {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  background-color: rgba(229, 158, 246, 0.8);
+  border-radius: 0.5em;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  background-color: rgba(151, 199, 233, 0.8);
+  border-radius: 0.5em;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-main {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 7;
+  background-color: rgba(184, 237, 178, 0.8);
+  border-radius: 0.5em;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-footer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background-color: rgba(248, 161, 161, 0.8);
+  border-radius: 0.5em;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    height: auto;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 100%;
+    padding: 10px;
+    grid-template-rows: repeat(8 1fr);
+  }
+
+  .grid-hero {
+    height: 30vh;
+    align-self: stretch;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: rgba(247, 237, 212, 0.8);
+    border-radius: 0.5em;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    background-image: url("./coding2.webp"); /* The image used */
+    background-color: #919191; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  .grid-side {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: rgba(229, 158, 246, 0.8);
+    border-radius: 0.5em;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .grid-header {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: rgba(151, 199, 233, 0.8);
+    border-radius: 0.5em;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .grid-main {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    background-color: rgba(184, 237, 178, 0.8);
+    border-radius: 0.5em;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .grid-footer {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    background-color: rgba(248, 161, 161, 0.8);
+    border-radius: 0.5em;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
